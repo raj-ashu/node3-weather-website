@@ -12,7 +12,7 @@ const forecast = (lat, lon, callback) => {
             callback('Unable to find location', undefined)
         } else {
             callback(undefined,
-                'it is currently ' + response.body.current.temp + ' degrees out. And the visibility is ' + response.body.current.visibility
+                'It is currently ' + response.body.current.temp + ' degrees out. But feels like '+response.body.current.feels_like+ ' degrees. And the visibility is ' + response.body.current.visibility+' .'
             )
         }
     })
